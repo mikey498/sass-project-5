@@ -1,0 +1,34 @@
+
+
+.headline {
+    &--primary {
+        @extend %headline-primary ;
+        }
+    &--secondary {
+         @extend %headline-secondary;
+         margin-bottom: em(20px);
+     }
+
+}
+
+.link {
+  text-decoration: none;
+  color: $malibu;
+  font-weight: $font_weight-bold;
+    }
+
+
+
+
+.blockquote {
+   @extend %center-align;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: $font_weight-light;
+    color: grey;
+    border-left: 4.8px solid $color-primary;
+    border-radius: $br--default;
+    width: 80%;
+    margin-bottom: em(34px, 24px);
+    padding-left: 18px;
+}

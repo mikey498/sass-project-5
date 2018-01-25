@@ -1,0 +1,103 @@
+
+
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+
+%display-block {//done
+  display: block;
+}
+
+
+%center-align {//done
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+%main-text {//done
+  font-size: 16px;
+  font-family: $font-primary;
+  line-height: ($base-line);
+  font-weight: $font_weight-light;
+  color: $grey;
+  word-spacing: 2px;
+}
+
+
+%main-img {//done
+  display: block;
+  @extend %center-align;
+  max-width: 100%;
+  margin-bottom: (20px);
+  }
+
+
+%nav-item-1 {//done
+  display: block;
+  margin: (10px);
+  text-align: center;
+}
+
+
+
+
+%nav-item-2 {//done
+  font-size: (19px);
+  font-weight: $font_weight-light;
+  display: block;
+  padding: em(8px, 18px);
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+  width: 100%;
+}
+
+%nav-hover {//done
+  color: $white;
+  background-color: $color-primary;
+  border-radius: $br--default;
+  height: $br--height;
+}
+
+
+
+
+
+%headline-primary {//done
+  color: $color-primary;
+  font-weight: $font_weight-bold;
+  font-size: em(26px);
+  line-height: 1.2em;
+  margin-top: 0;
+  margin-left: 20px;
+  padding-right: 2em;
+
+}
+
+%headline-secondary {//done
+  margin-top: 0;
+  color: palette(gray, light);
+  letter-spacing: $letter-spacing;
+  font-weight: $font_weight-medium;
+  font-size: (17px);
+}
+
+
+
+
+%clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+
+
+%pseudos {
+  display: block;
+  content: '';
+  position: absolute;
+}

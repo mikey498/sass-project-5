@@ -1,0 +1,20 @@
+
+
+.img {
+  @include m(logo) {
+    @extend %main-img;
+    padding-top: 1em;
+  }
+
+  @include m(avatar) {
+    @extend %main-img;
+
+  }
+
+  @include m(frame) {
+    @extend %main-img;
+    border: 1px solid grey;
+    padding: (10px);
+
+  }
+}

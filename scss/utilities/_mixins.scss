@@ -1,0 +1,78 @@
+
+
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+
+
+@mixin e($element) {
+    &__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+
+
+@mixin bg-colors($map) {
+    @each $theme, $color in $map {
+        &--#{$theme} {
+            background-color: $color;
+        }
+    }
+}
+
+
+@mixin flexy (
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null) {
+    display: $disp;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $just;
+  }
+
+
+
+// Media queries
+
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width:$breakpoint-sm) and (max-width:$breakpoint-md) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width:$breakpoint-md + 1) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width:$breakpoint-lg) {
+      @content;
+    }
+  }
+  @else {
+    @error "No value could be retrieved for `#{$break}`."
+  }
+}
+
+
+@mixin g-columns {
+    @for $i from 1 through $col--count  {
+    $context: g-context($col--width, $col--count , $gutter-width) !global;
+    $target: ($col--width * $i) + ($gutter-width * ($i - 1));
+
+
+    &--#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}

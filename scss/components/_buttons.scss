@@ -1,0 +1,32 @@
+
+//      B U T T O N  --  S T Y L E S
+
+[class^="btn--"] {
+  @extend %display-block;
+  @extend %center-align;
+  width: 100%;
+  border: 0;
+  color: $white;
+  border-radius : $br--default;
+
+  font-size : (13px);
+  font-weight: $font_weight-medium;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+  padding: 15px 30px;
+  &:hover {
+    background-color: rgb(216, 216, 216);
+
+}
+  @include mq(medium) {
+    width: auto;
+
+  }
+}
+
+
+.btn {
+   @include bg-colors($ui--clrs);
+
+ }

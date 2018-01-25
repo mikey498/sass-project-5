@@ -1,0 +1,58 @@
+
+.container {
+  @extend %center-align;
+  padding: 0 1em .5em 1em;
+  @extend %main-text;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.grid__row {
+  @include flexy ($dir:column, $just:center);
+  margin-bottom: 1em;
+  @include mq(medium) {
+    @include flexy($dir:row, $just:space-between);
+    align-items: flex-start;
+  }
+}
+
+
+[class^="grid__col--"] {
+    @extend %center-align;
+    @extend %display-block;
+    width: 100%;
+    margin-top: (11px);
+    margin-bottom: (11px);
+    border-radius: $br--default;
+    padding: 15px 30px;
+    height: auto;
+    border: 0;
+    color: palette(gray);
+    font-size : (19px);
+    font-weight: $font_weight-medium;
+
+    @include mq(medium){
+      @include flexy ($dir:row, $just:space-around);
+    }
+  }
+
+
+[class^="grid__col--"] + [class^="grid__col--"] {
+  @include mq(small) {
+
+  }
+}
+
+
+
+ .theme__colors.grid {
+    &__col {
+      @include bg-colors($col-colors);
+    }
+}
+
+.grid__col {
+  @include mq(medium) {
+    @include g-columns;
+  }
+}

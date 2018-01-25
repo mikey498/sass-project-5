@@ -1,0 +1,26 @@
+
+
+// ==========================================================================
+//    N A V I G A T I O N
+// ==========================================================================
+
+
+
+.nav {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  @include mq(medium) {
+    @include flexy ($dir:row, $just: space-between);
+  }
+
+  @include e(item) {
+    @extend %nav-item-1 ;
+    a {
+      @extend %nav-item-2 ;
+      color: palette(gray);
+      &:hover {
+        @extend %nav-hover;
+      }
+    }
+  }
+}

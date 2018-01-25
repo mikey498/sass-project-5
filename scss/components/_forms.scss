@@ -1,0 +1,47 @@
+
+// F O R M S    ---   S T Y L E S
+
+
+@include mq(medium) {
+    .form__input + .btn--default {
+        width: 100%;
+    }
+}
+
+
+.form {
+
+    @include e(label) {
+        display: block;
+        margin-bottom: em(10px);
+        @include m(hidden) {
+          border: 0;
+          height: 11px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+    }
+
+    @include e(input) {
+        width: 100%;
+        font-size: (16px);
+        margin-bottom: em(25px, 18px);
+        margin-top: 20px;
+        border: 0;
+        border-bottom: 5px solid $viking;
+        color:grey;
+        font-weight: $font_weight-medium;
+        font-family: $font-secondary;
+        padding-left: 15px;
+        padding-bottom: 15px;
+
+        &:focus {
+            border-color: $viking, lighten;
+            height: 40px;
+            border-width: 1px;
+          }
+        }
+      }
