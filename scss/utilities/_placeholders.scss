@@ -5,18 +5,18 @@
 // ==========================================================================
 
 
-%display-block {//done
+%display-block {
   display: block;
 }
 
 
-%center-align {//done
+%center-align {
     margin-left: auto;
     margin-right: auto;
 }
 
 
-%main-text {//done
+%main-text {
   font-size: 16px;
   font-family: $font-primary;
   line-height: ($base-line);
@@ -26,7 +26,7 @@
 }
 
 
-%main-img {//done
+%main-img {
   display: block;
   @extend %center-align;
   max-width: 100%;
@@ -43,7 +43,7 @@
 
 
 
-%nav-item-2 {//done
+%nav-item-2 {
   font-size: (19px);
   font-weight: $font_weight-light;
   display: block;
@@ -53,7 +53,7 @@
   width: 100%;
 }
 
-%nav-hover {//done
+%nav-hover {
   color: $white;
   background-color: $color-primary;
   border-radius: $br--default;
@@ -64,7 +64,7 @@
 
 
 
-%headline-primary {//done
+%headline-primary {
   color: $color-primary;
   font-weight: $font_weight-bold;
   font-size: em(26px);
@@ -75,7 +75,7 @@
 
 }
 
-%headline-secondary {//done
+%headline-secondary {
   margin-top: 0;
   color: palette(gray, light);
   letter-spacing: $letter-spacing;
